@@ -12,7 +12,8 @@ class UserController extends Controller
 
     public function index()
     {
-        return view('admin.user.index');
+        $data= User::latest()->paginate(10);
+        return view('admin.user.index', compact('data'));
     }
 
     public function create()
@@ -30,25 +31,33 @@ class UserController extends Controller
     }
 
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
-        //
+        $data= User::findOrFail($id);
+        return view('admin.user.form', compact('data'));
     }
 
 
     public function update(UserRequest $request, $id)
     {
-        //
+        $data= User::findOrFail($id);
+
+        if($request->password){
+            $data->update($request->all());
+        }else{
+            $data->update($request->only('email'));
+        }
+
+        return redirect()->back()->with([
+            'message' => 'بەسەرکەوتووی تازەکرایەوە'
+        ]);
     }
 
 
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)->delete();
+
+        return redirect()->back();
     }
 }
