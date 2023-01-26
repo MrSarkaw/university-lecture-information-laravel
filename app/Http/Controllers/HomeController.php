@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\College_Inist;
+use App\Models\Deparment;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $data=[
+            ['name' => 'بەکارهێنەر', 'icon' => 'bi bi-person', 'count' => User::count()],
+            ['name' => 'کۆلێجەکان/پەیمانگاکان', 'icon' => 'bi bi-building', 'count' => College_Inist::count()],
+            ['name' => 'بەشەکان', 'icon' => 'bi bi-building', 'count' => Deparment::count()],
+        ];
+        return view('admin.home', compact('data'));
     }
 }
