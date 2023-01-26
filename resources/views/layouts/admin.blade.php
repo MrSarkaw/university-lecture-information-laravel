@@ -172,6 +172,32 @@
                 </li>
 
 
+                <li class="nav-item">
+
+                    <a class="nav-link collapsed {{ in_array(Route::currentRouteName(), ['admin.departments.index', 'admin.departments.create', 'admin.departments.edit']) ? 'bg-primary bg-opacity-25 d-block' : '' }}"
+                        data-bs-target="#departments-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-building mx-1"></i> <span>بەشەکان </span><i
+                            class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="departments-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a class="{{ in_array(Route::currentRouteName(), ['admin.departments.index']) ? 'nav-link d-block' : '' }}"
+                                href="{{ route('admin.departments.index') }}">
+                                <i class="bi bi-dot"></i>
+                                <span> بینین </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="{{ in_array(Route::currentRouteName(), ['admin.departments.create']) ? 'nav-link d-block' : '' }}"
+                                href="{{ route('admin.departments.create') }}">
+                                <i class="bi bi-dot"></i>
+                                <span> دروست کردن </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
 
 
             </aside><!-- End Sidebar-->
