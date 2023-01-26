@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class College_Inist extends Model
 {
     use HasFactory;
+
+    protected $fillable= ['name', 'type', 'image'];
 }

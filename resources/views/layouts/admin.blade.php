@@ -146,6 +146,31 @@
                     </ul>
                 </li>
 
+                <li class="nav-item">
+
+                    <a class="nav-link collapsed {{ in_array(Route::currentRouteName(), ['admin.colleges.index', 'admin.colleges.create', 'admin.colleges.edit']) ? 'bg-primary bg-opacity-25 d-block' : '' }}"
+                        data-bs-target="#colleges-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-building mx-1"></i> <span> کۆلێجەکان/پەیمانگاکان </span><i
+                            class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="colleges-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a class="{{ in_array(Route::currentRouteName(), ['admin.colleges.index']) ? 'nav-link d-block' : '' }}"
+                                href="{{ route('admin.colleges.index') }}">
+                                <i class="bi bi-dot"></i>
+                                <span> بینین </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="{{ in_array(Route::currentRouteName(), ['admin.colleges.create']) ? 'nav-link d-block' : '' }}"
+                                href="{{ route('admin.colleges.create') }}">
+                                <i class="bi bi-dot"></i>
+                                <span> دروست کردن </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
 
 
 
