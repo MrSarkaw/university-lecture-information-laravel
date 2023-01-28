@@ -31,7 +31,7 @@
                     <a href="">Login</a>
                 </div>
             </header>
-
+            @if(Route::currentRouteName() == 'index')
             <div class="text-center mt-20">
                 <p class="text-center text-5xl leading-[65px] font-bold">
                     Start Your <br> Future with university
@@ -40,62 +40,10 @@
 
                 <img src="{{ asset('Studying-rafiki.svg') }}" class="w-4/12 mx-auto mt-3" alt="">
             </div>
+            @endif
         </div>
 
-        <div class="w-10/12 mx-auto my-10">
-            <p class="">Programs</p>
-            <p class="text- font-bold text-2xl">Browse Department by Lectures</p>
-            <div class="grid grid-cols-6 gap-10 mt-5">
-                <div class="p-4 rounded shadow bg-white text-center">
-                    <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-                    <p class="mt-2">Web Design</p>
-                </div>
-                <div class="p-4 rounded shadow bg-white text-center">
-                    <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-                    <p class="mt-2">Web Design</p>
-                </div>
-                <div class="p-4 rounded shadow bg-white text-center">
-                    <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-                    <p class="mt-2">Web Design</p>
-                </div>
-                <div class="p-4 rounded shadow bg-white text-center">
-                    <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-                    <p class="mt-2">Web Design</p>
-                </div>
-                <div class="p-4 rounded shadow bg-white text-center">
-                    <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-                    <p class="mt-2">Web Design</p>
-                </div>
-                <div class="p-4 rounded shadow bg-white text-center">
-                    <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-                    <p class="mt-2">Web Design</p>
-                </div>
 
-            </div>
-
-
-            <div class="mt-24">
-                <p>College/Inst</p>
-                <p class="text- font-bold text-2xl">Find Colleges</p>
-                <div class="grid grid-cols-3 gap-10 mt-5">
-                    <div class=" rounded-lg shadow bg-white overflow-hidden">
-                        <img src="{{ asset('img/OIdsJNjx7M2zmNrLCLChaQh7aHnYlJxsHYxnT7tl.jpg') }}" class="w-full rounded-lg  h-72 object-cover" alt="">
-                        <p class="mt-2 p-2 text-lg">Informatics</p>
-                    </div>
-
-                    <div class=" rounded-lg shadow bg-white overflow-hidden">
-                        <img src="{{ asset('img/OIdsJNjx7M2zmNrLCLChaQh7aHnYlJxsHYxnT7tl.jpg') }}" class="w-full  rounded-lg h-72 object-cover" alt="">
-                        <p class="mt-2 p-2 text-lg">Informatics</p>
-                    </div>
-
-                    <div class=" rounded-lg shadow bg-white overflow-hidden">
-                        <img src="{{ asset('img/OIdsJNjx7M2zmNrLCLChaQh7aHnYlJxsHYxnT7tl.jpg') }}" class="w-full rounded-lg  h-72 object-cover" alt="">
-                        <p class="mt-2 p-2 text-lg">Informatics</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
         @yield('content')
 
 

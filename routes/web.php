@@ -5,13 +5,12 @@ use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\LectureController;
 use App\Http\Controllers\Admin\StageController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [PublicController::class, 'index'])->name('index');
 
 Auth::routes();
 
