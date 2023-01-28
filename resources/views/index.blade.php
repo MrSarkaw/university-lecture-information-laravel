@@ -20,34 +20,12 @@
     <p  class="mt-24">Programs</p>
     <p class="text- font-bold text-2xl">Browse Department by Lectures</p>
     <div class="grid grid-cols-6 gap-10 mt-5">
-        <div class="p-4 rounded shadow bg-white text-center">
-            <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-            <p class="mt-2">Web Design</p>
-        </div>
-        <div class="p-4 rounded shadow bg-white text-center">
-            <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-            <p class="mt-2">Web Design</p>
-        </div>
-        <div class="p-4 rounded shadow bg-white text-center">
-            <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-            <p class="mt-2">Web Design</p>
-        </div>
-        <div class="p-4 rounded shadow bg-white text-center">
-            <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-            <p class="mt-2">Web Design</p>
-        </div>
-        <div class="p-4 rounded shadow bg-white text-center">
-            <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-            <p class="mt-2">Web Design</p>
-        </div>
-        <div class="p-4 rounded shadow bg-white text-center">
-            <i class="fa-solid fa-pen text-xl text-[#314ece]"></i>
-            <p class="mt-2">Web Design</p>
-        </div>
-
+        @foreach ($lectures as  $row)
+            <div class="p-4 rounded shadow bg-white text-center">
+                <img src="https://visualpharm.com/assets/801/Module-595b40b75ba036ed117d867f.svg" class="w-14 mx-auto" alt="">
+                <p class="mt-2">{{$row->name}}</p>
+            </div>
+        @endforeach
     </div>
-
-
-
 </div>
 @endsection
